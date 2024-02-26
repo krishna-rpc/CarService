@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Car Service Operator | Booking</title>
+<script type="text/javascript" th:src="@{/js/actions.js}"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+	.table tr th {
+	  vertical-align: middle;
+	}
+</style>
+</head>
+<body>
+	<h1>Car Service Operator | Booking</h1>
+	<hr />
+	<table class="table table-md table-bordered">
+		<thead>
+			<tr>
+		        <td>id</td>
+		        <td>name</td>
+		        <td>booked slot</td>
+		        <td>available slot</td>
+		        <td>book your slot</td>
+		    </tr>
+			
+		</thead>
+		<tbody>
+			<tr th:each="op : ${ops}">
+		        <td th:text="${op.id}">1</td>
+		        <td><a href="#" th:text="${op.operatorName}">click to check slot OR book ...</a></td>
+		        <td><a href="#">click to check slot OR book ...</a></td>
+		        <td>Text ...</td>
+		        <td>book your slot</td>
+		    </tr>
+		</tbody>
+	</table>
+</body>
+</html>
